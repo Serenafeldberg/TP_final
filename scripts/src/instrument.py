@@ -198,9 +198,6 @@ class Instrument ():
         array_mod = self.gen_mod(t, yy, (end - tstart))
         array_mod *= 0.01
 
-        plt.plot(t, array_mod)
-        plt.show()
-
         return array_mod
 
     def gen_track (self):
