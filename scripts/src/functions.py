@@ -51,25 +51,15 @@ def invlog (t, t0):
     return t
 
 def tri (t, t0, t1, a1):
-    if t0 < t1:
-        val = 0
-    else:
-        val = len(t) /t0 * (t0*40)
-    t [t < t1] = t[t < t1] * a1 / t1
-    t [t > t1] = ((t [t > t1] - t1) / (t1 - t0)) + a1
+    array = np.zeros_like(t)
+    array [t < t1] = t[t < t1] * a1 / t1
+    array [t > t1] = ((t [t > t1] - t1) / (t1 - t0)) + a1
 
-    return t + val
+    return array
 
 def pulses (t, t0, t1, a1):
     t_ = t/t0 - np.floor (t/t0)
     array = np.clip(abs( (1- a1) / t1 * (t_ - t0 + t1)) + a1, None, 1)
     return array
-
-t = np.arange(0, 100)
-x = tri(t, 0.05, 0.03, 1.3)
-
-
-plt.plot(t, x)
-plt.show()
 
 
