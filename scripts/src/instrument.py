@@ -1,6 +1,7 @@
 
 
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy.io.wavfile import write
 from note import Note
 import functions
@@ -166,7 +167,8 @@ class Instrument ():
         
         #decay
         data_d= self.decay(t[(t >= duration_n)])
-        y [(t >= duration_n)] *= (data_d )
+        val = data_s[-1] - data_d[0]
+        y [(t >= duration_n)] *= (data_d + val)
         
         return y
 
@@ -195,6 +197,9 @@ class Instrument ():
         
         array_mod = self.gen_mod(t, yy, (end - tstart))
         array_mod *= 0.01
+
+        plt.plot(t, array_mod)
+        plt.show()
 
         return array_mod
 
@@ -228,6 +233,6 @@ class Instrument ():
         track = self.gen_track()
         write (self.output , self.frecuency , track.astype(np.int16))
 
-ins = Instrument('piano.txt','partitura.txt', 44100, 'audio.wav')
-ins.audio_wav()
+ins = Instrument('piano.txt','partituras_hakuna_go.txt', 44100, 'audio.wav')
+ins.gen_track()
 
