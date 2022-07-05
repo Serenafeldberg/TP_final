@@ -233,6 +233,5 @@ class Instrument ():
         track = self.gen_track()
         write (self.output , self.frecuency , track.astype(np.int16))
 
-ins = Instrument('piano.txt','partituras_hakuna_go.txt', 44100, 'audio.wav')
-ins.gen_track()
+
 
