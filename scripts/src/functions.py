@@ -9,7 +9,9 @@ def linear (t, t0):
     return (t / t0)
 
 def invlinear (t, t0):
-    return np.clip(1 - (t/ t0), 0, 1)
+    array = (1 - t / t0) 
+    val = 1 - array[0]
+    return array + val
 
 def sin (t, a, f):
     return 1 + a * np.sin(f * t)
@@ -56,3 +58,5 @@ def tri (t, t0, t1, a1):
 
 def pulses (t, t0, t1, a1):
     val = t/t0 - abs (t/t0)
+
+

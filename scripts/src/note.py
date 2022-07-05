@@ -1,12 +1,22 @@
 from notes import frecuency
 
 class Note ():
+    '''
+    Creates the class Note
+
+    PARAMS 
+    -> file: music sheet file
+    '''
     def __init__ (self, file):
         self.file = file
         self.frecuency = frecuency
         self.notes = self.read_file()
 
     def read_file (self):
+        '''
+        Reads the music sheet and returns a disctionary with 
+        the value as a list with the time of start, frecuency and duration of the note
+        '''
         self.notes = {}
         with open(self.file, 'r') as fn:
             lines = fn.readlines()
@@ -20,7 +30,7 @@ class Note ():
 
     def get_duration (self):
         '''
-        Returns the total duration of the song (partiture)
+        Returns the total duration of the song (music sheet)
         '''
         duration = 0
         bucket = 0
@@ -48,6 +58,9 @@ class Note ():
         return duration
 
     def get_notes (self):
+        '''
+        Gets the amount of notes that the music sheet has
+        '''
         keys = list(self.notes.keys())
         return keys[-1]
 
