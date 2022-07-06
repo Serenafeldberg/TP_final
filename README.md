@@ -1,6 +1,6 @@
 # Pensamiento Computacional - Final Project
 
-Within this repository there are different files, which all compile the final project for this course, Pensamiento Computacional. When run, part of the code shall convert a music sheet into an audio in wave format. Another part is dedicated to the communication between the computer and an electric xylophone, which converts the same music sheet into a list of objects which represent each note that can be received by the physical instrument, and can be read by the xylophone in order for the song to be played.
+Within this repository there are different files, which all compile the final project for this course, Pensamiento Computacional. When run, part of the code would generate a music sheet from a midi file, another part of the code shall convert a music sheet into an audio in wave format, and a whole section is also dedicated to the communication between the computer and an electric xylophone: it converts the same music sheet into a list of objects which represent each note that can be read by the xylophone in order for the song to be played. And of course, finally there are tests for the functions created in order to check if everything is running as it should.
 
 ## Using the respository
 
