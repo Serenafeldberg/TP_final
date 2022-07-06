@@ -1,6 +1,15 @@
 from xylophone.xylo import XyloNote
+from typing import List
 
-def xylonote_list(filename):
+def xylonote_list(filename) -> List:
+    '''
+    This function eliminates the notes the xylophon does not admit.
+
+    PARAMS 
+    -> filename: str, name of the music sheet
+
+    returns a list containg either XyloNotes or nothing. 
+    '''
     with open(filename, 'r') as f:
 
             notes = ['G4', 'G5', 'G6', 'G#4', 'G#6', 'Gb6', 'A4', 'A5', 'A6', 'A#4', 'A#5', 'A#6', 'Ab4', 'Ab5', 'Ab6', 

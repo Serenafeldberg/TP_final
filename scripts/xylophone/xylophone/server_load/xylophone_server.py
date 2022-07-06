@@ -12,6 +12,10 @@ args = parser.parse_args()
 
 
 def main():
+    '''
+    This function is in charge of generating the list full of XyloNotes
+    as well as the XyloClient. It also loads the list into the server and plays it
+    '''
     xylo_list = xylonote_list(args.i)
     client = XyloClient(host=args.o, port = 8080)
     client.load(xylo_list)
