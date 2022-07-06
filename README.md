@@ -6,6 +6,10 @@ Within this repository there are different files, which all compile the final pr
 
 First of all, for the program to be executable, the user must have a device with a python interpreter. Once this is secured, the user must clone the repository to a location on the computer to be used.
 
+```shell
+$ git clone https://github.com/Serenafeldberg/TP_final.git
+```
+
 ## Installation
 
 In order to use this respository, certain dependencies must be installed; it can be installed with pip. Once, the repository is cloned, the user needs to execute (the following model is based on the Xylophone README provided by the professors):
