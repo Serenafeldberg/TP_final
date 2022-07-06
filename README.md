@@ -4,7 +4,7 @@ Within this repository there are different files, which all compile the final pr
 
 ## Using the respository
 
-First of all, the user must clone the repository into a location in the computer to use. Once done that, for the program to be executable, the user must have a device with a python interpreter.
+First of all, for the program to be executable, the user must have a device with a python interpreter. Once this is secured, the user must clone the repository to a location on the computer to be used.
 
 ## Installation
 
